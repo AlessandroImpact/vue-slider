@@ -132,7 +132,7 @@ const app = new Vue(
                 }
             ],
             active: 0,
-            clock:
+            clock:0,
 
         }, //metodi
 
@@ -165,9 +165,10 @@ const app = new Vue(
                 },
 
             stopPlay() {
-                
+                clearInterval(this.clock);
+                this.clock = null;
             }
             }
         }
-    }
+    
 );

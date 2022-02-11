@@ -15,7 +15,11 @@
 <!--container generale-->
     <div class="container" id="app">
           <!--container per elemento corrente-->
-        <div class="items">
+        <div class="items"
+        @mouseleave="autoplay"
+        @mouseover="stopPlay"
+        @focus="stopPlay"
+        @blur="autoplay">
            <div class="item">
                <img :src="items[active].url" alt="">
                <div class="text">
