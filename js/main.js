@@ -153,7 +153,7 @@ const app = new Vue(
                 
             },
 
-            gotoSlide(indice) {
+            gotoSlide(index) {
                 this.active = index;
 
             }
