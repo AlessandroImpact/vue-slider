@@ -100,7 +100,7 @@ next.addEventListener('click', function() {
 /* RISOLUZIONE CON VUE.JS */ 
 
 //inizializzazione struttura dati con Vue
-const vue = new Vue(
+const app = new Vue(
     {
         el: '#app',
         data: {
@@ -134,7 +134,7 @@ const vue = new Vue(
             active: 0,
 
         }, //metodi
-        
+
         methods: {
             previus() {
                 if (this.active == 0) {
@@ -151,6 +151,11 @@ const vue = new Vue(
                     this.active++;
                 }
                 
+            },
+
+            gotoSlide(indice) {
+                this.active = index;
+
             }
         }
     }

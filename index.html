@@ -31,7 +31,10 @@
             <div class="prev" @click="previus"></div>
             <div class="next" @click="next"></div>
 
-            <div class="thumb" :class="indice == active?'active':''" v-for="(item, indice) in items">
+            <div class="thumb" :
+            class="indice == active?'active':''" 
+            v-for="(item, indice) in items" 
+            @click="gotoSlide(indice)"   >
                 <img :src="item.url" alt="">
             </div>
         </div>
