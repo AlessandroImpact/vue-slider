@@ -132,6 +132,7 @@ const app = new Vue(
                 }
             ],
             active: 0,
+            clock:
 
         }, //metodi
 
@@ -155,7 +156,17 @@ const app = new Vue(
 
             gotoSlide(index) {
                 this.active = index;
+            },
 
+            autoplay() {
+                this.clock = setInterval(() => {
+                    this.next();
+                },3000);
+                },
+
+            stopPlay() {
+                
+            }
             }
         }
     }
